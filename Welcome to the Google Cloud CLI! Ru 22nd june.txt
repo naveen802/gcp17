@@ -1,0 +1,551 @@
+Welcome to the Google Cloud CLI! Run "gcloud -h" to get the list of available commands.
+---
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Settings from your current configuration [default] are:
+accessibility:
+  screen_reader: 'False'
+compute:
+  region: us-central1
+  zone: us-central1-f
+core:
+  account: naveenn.rch@gmail.com
+  disable_usage_reporting: 'True'
+  project: sound-bay-390008
+
+Pick configuration to use:
+ [1] Re-initialize this configuration [default] with new settings
+ [2] Create a new configuration
+Please enter your numeric choice:  1
+
+Your current configuration has been set to: [default]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.
+Reachability Check passed.
+Network diagnostic passed (1/1 checks passed).
+
+Choose the account you would like to use to perform operations for this configuration:
+ [1] naveenn.rch@gmail.com
+ [2] Log in with a new account
+Please enter your numeric choice:  1
+
+You are logged in as: [naveenn.rch@gmail.com].
+
+Pick cloud project to use:
+ [1] sound-bay-390008
+ [2] Enter a project ID
+ [3] Create a new project
+Please enter numeric choice or text value (must exactly match list item):  1
+
+Your current project has been set to: [sound-bay-390008].
+
+Do you want to configure a default Compute Region and Zone? (Y/n)?  y
+
+Which Google Compute Engine zone would you like to use as project default?
+If you do not specify a zone via a command line flag while working with Compute Engine resources, the default is
+assumed.
+ [1] us-east1-b
+ [2] us-east1-c
+ [3] us-east1-d
+ [4] us-east4-c
+ [5] us-east4-b
+ [6] us-east4-a
+ [7] us-central1-c
+ [8] us-central1-a
+ [9] us-central1-f
+ [10] us-central1-b
+ [11] us-west1-b
+ [12] us-west1-c
+ [13] us-west1-a
+ [14] europe-west4-a
+ [15] europe-west4-b
+ [16] europe-west4-c
+ [17] europe-west1-b
+ [18] europe-west1-d
+ [19] europe-west1-c
+ [20] europe-west3-c
+ [21] europe-west3-a
+ [22] europe-west3-b
+ [23] europe-west2-c
+ [24] europe-west2-b
+ [25] europe-west2-a
+ [26] asia-east1-b
+ [27] asia-east1-a
+ [28] asia-east1-c
+ [29] asia-southeast1-b
+ [30] asia-southeast1-a
+ [31] asia-southeast1-c
+ [32] asia-northeast1-b
+ [33] asia-northeast1-c
+ [34] asia-northeast1-a
+ [35] asia-south1-c
+ [36] asia-south1-b
+ [37] asia-south1-a
+ [38] australia-southeast1-b
+ [39] australia-southeast1-c
+ [40] australia-southeast1-a
+ [41] southamerica-east1-b
+ [42] southamerica-east1-c
+ [43] southamerica-east1-a
+ [44] asia-east2-a
+ [45] asia-east2-b
+ [46] asia-east2-c
+ [47] asia-northeast2-a
+ [48] asia-northeast2-b
+ [49] asia-northeast2-c
+ [50] asia-northeast3-a
+Did not print [63] options.
+Too many options [113]. Enter "list" at prompt to print choices fully.
+Please enter numeric choice or text value (must exactly match list item):  2
+
+Your project default Compute Engine zone has been set to [us-east1-c].
+You can change it by running [gcloud config set compute/zone NAME].
+
+Your project default Compute Engine region has been set to [us-east1].
+You can change it by running [gcloud config set compute/region NAME].
+
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use naveenn.rch@gmail.com by default
+* Commands will reference project `sound-bay-390008` by default
+* Compute Engine commands will use region `us-east1` by default
+* Compute Engine commands will use zone `us-east1-c` by default
+
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic --help` to learn about advanced features of the SDK like arg files and output formatting
+* Run `gcloud cheat-sheet` to see a roster of go-to `gcloud` commands.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>gsutil ls
+gs://naveen99/
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>gsutil ls gs://naveen99/
+gs://naveen99/customer_details.csv
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk  -d
+
+Welcome to BigQuery! This script will walk you through the
+process of initializing your .bigqueryrc configuration file.
+
+First, we need to set up your credentials if they do not
+already exist.
+
+Setting project_id sound-bay-390008 as the default.
+
+BigQuery configuration complete! Type "bq" to get started.
+
+BigQuery error in mk operation: Cannot determine dataset described by
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk  -d product_data
+Dataset 'sound-bay-390008:product_data' successfully created.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls
+   datasetId
+ --------------
+  gcp17_set
+  naveengcp11
+  product_data
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls
+   datasetId
+ --------------
+  ORDER_DATA
+  gcp17_set
+  naveengcp11
+  product_data
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk -d sales_data
+Dataset 'sound-bay-390008:sales_data' successfully created.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls
+   datasetId
+ --------------
+  ORDER_DATA
+  gcp17_set
+  naveengcp11
+  product_data
+  sales_data
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bg mk -t sales_data electronic_items
+'bg' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk -t sales_data electronic_items
+BigQuery error in mk operation: Cannot determine table described by sales_data
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk -t sales_data.electronic_items
+Table 'sound-bay-390008:sales_data.electronic_items' successfully created.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls
+   datasetId
+ --------------
+  ORDER_DATA
+  gcp17_set
+  naveengcp11
+  product_data
+  sales_data
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq sales_data
+FATAL Command 'sales_data' unknown
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bg ls sales_data
+'bg' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls sales_data
+      tableId        Type    Labels   Time Partitioning   Clustered Fields
+ ------------------ ------- -------- ------------------- ------------------
+  electronic_items   TABLE
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq electronic_items id:INTEGER
+FATAL Command 'electronic_items' unknown
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq sales_data.electronic_items id:INTEGER
+FATAL Command 'sales_data.electronic_items' unknown
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq -t sales_data.electronic_items id:INTEGER
+FATAL Flags parsing error: Unknown command line flag 't'
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk -t sales_data.electronic_items id:INTEGER
+BigQuery error in mk operation: Table 'sound-
+bay-390008:sales_data.electronic_items' could not be created; a table with this
+name already exists.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls
+   datasetId
+ --------------
+  ORDER_DATA
+  gcp17_set
+  naveengcp11
+  product_data
+  sales_data
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq mk -t sales_data.wastage_items id:INTEGER,name:STRING
+Table 'sound-bay-390008:sales_data.wastage_items' successfully created.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq -t sales_data
+FATAL Flags parsing error: Unknown command line flag 't'
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq show sales_data
+Dataset sound-bay-390008:sales_data
+
+   Last modified              ACLs             Labels    Type
+ ----------------- -------------------------- -------- ---------
+  22 Jun 12:34:31   Owners:                             DEFAULT
+                      naveenn.rch@gmail.com,
+                      projectOwners
+                    Writers:
+                      projectWriters
+                    Readers:
+                      projectReaders
+
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq show sales_data.wastage_items
+Table sound-bay-390008:sales_data.wastage_items
+
+   Last modified        Schema        Total Rows   Total Bytes   Expiration   Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels
+ ----------------- ----------------- ------------ ------------- ------------ ------------------- ------------------ --------------------- ---------------------- --------
+  22 Jun 13:07:15   |- id: integer    0            0                                                                 0
+
+                    |- name: string
+
+
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq -t sales_data.wastage_items loc:string
+FATAL Flags parsing error: Unknown command line flag 't'
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq sales_data.wastage_items loc:string
+FATAL Command 'sales_data.wastage_items' unknown
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq.py
+'bq.py' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>'bq.py'
+''bq.py'' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>help
+For more information on a specific command, type HELP command-name
+ASSOC          Displays or modifies file extension associations.
+ATTRIB         Displays or changes file attributes.
+BREAK          Sets or clears extended CTRL+C checking.
+BCDEDIT        Sets properties in boot database to control boot loading.
+CACLS          Displays or modifies access control lists (ACLs) of files.
+CALL           Calls one batch program from another.
+CD             Displays the name of or changes the current directory.
+CHCP           Displays or sets the active code page number.
+CHDIR          Displays the name of or changes the current directory.
+CHKDSK         Checks a disk and displays a status report.
+CHKNTFS        Displays or modifies the checking of disk at boot time.
+CLS            Clears the screen.
+CMD            Starts a new instance of the Windows command interpreter.
+COLOR          Sets the default console foreground and background colors.
+COMP           Compares the contents of two files or sets of files.
+COMPACT        Displays or alters the compression of files on NTFS partitions.
+CONVERT        Converts FAT volumes to NTFS.  You cannot convert the
+               current drive.
+COPY           Copies one or more files to another location.
+DATE           Displays or sets the date.
+DEL            Deletes one or more files.
+DIR            Displays a list of files and subdirectories in a directory.
+DISKPART       Displays or configures Disk Partition properties.
+DOSKEY         Edits command lines, recalls Windows commands, and
+               creates macros.
+DRIVERQUERY    Displays current device driver status and properties.
+ECHO           Displays messages, or turns command echoing on or off.
+ENDLOCAL       Ends localization of environment changes in a batch file.
+ERASE          Deletes one or more files.
+EXIT           Quits the CMD.EXE program (command interpreter).
+FC             Compares two files or sets of files, and displays the
+               differences between them.
+FIND           Searches for a text string in a file or files.
+FINDSTR        Searches for strings in files.
+FOR            Runs a specified command for each file in a set of files.
+FORMAT         Formats a disk for use with Windows.
+FSUTIL         Displays or configures the file system properties.
+FTYPE          Displays or modifies file types used in file extension
+               associations.
+GOTO           Directs the Windows command interpreter to a labeled line in
+               a batch program.
+GPRESULT       Displays Group Policy information for machine or user.
+GRAFTABL       Enables Windows to display an extended character set in
+               graphics mode.
+HELP           Provides Help information for Windows commands.
+ICACLS         Display, modify, backup, or restore ACLs for files and
+               directories.
+IF             Performs conditional processing in batch programs.
+LABEL          Creates, changes, or deletes the volume label of a disk.
+MD             Creates a directory.
+MKDIR          Creates a directory.
+MKLINK         Creates Symbolic Links and Hard Links
+MODE           Configures a system device.
+MORE           Displays output one screen at a time.
+MOVE           Moves one or more files from one directory to another
+               directory.
+OPENFILES      Displays files opened by remote users for a file share.
+PATH           Displays or sets a search path for executable files.
+PAUSE          Suspends processing of a batch file and displays a message.
+POPD           Restores the previous value of the current directory saved by
+               PUSHD.
+PRINT          Prints a text file.
+PROMPT         Changes the Windows command prompt.
+PUSHD          Saves the current directory then changes it.
+RD             Removes a directory.
+RECOVER        Recovers readable information from a bad or defective disk.
+REM            Records comments (remarks) in batch files or CONFIG.SYS.
+REN            Renames a file or files.
+RENAME         Renames a file or files.
+REPLACE        Replaces files.
+RMDIR          Removes a directory.
+ROBOCOPY       Advanced utility to copy files and directory trees
+SET            Displays, sets, or removes Windows environment variables.
+SETLOCAL       Begins localization of environment changes in a batch file.
+SC             Displays or configures services (background processes).
+SCHTASKS       Schedules commands and programs to run on a computer.
+SHIFT          Shifts the position of replaceable parameters in batch files.
+SHUTDOWN       Allows proper local or remote shutdown of machine.
+SORT           Sorts input.
+START          Starts a separate window to run a specified program or command.
+SUBST          Associates a path with a drive letter.
+SYSTEMINFO     Displays machine specific properties and configuration.
+TASKLIST       Displays all currently running tasks including services.
+TASKKILL       Kill or stop a running process or application.
+TIME           Displays or sets the system time.
+TITLE          Sets the window title for a CMD.EXE session.
+TREE           Graphically displays the directory structure of a drive or
+               path.
+TYPE           Displays the contents of a text file.
+VER            Displays the Windows version.
+VERIFY         Tells Windows whether to verify that your files are written
+               correctly to a disk.
+VOL            Displays a disk volume label and serial number.
+XCOPY          Copies files and directory trees.
+WMIC           Displays WMI information inside interactive command shell.
+
+For more information on tools see the command-line reference in the online help.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq show sales_data
+Dataset sound-bay-390008:sales_data
+
+   Last modified              ACLs             Labels    Type
+ ----------------- -------------------------- -------- ---------
+  22 Jun 12:34:31   Owners:                             DEFAULT
+                      naveenn.rch@gmail.com,
+                      projectOwners
+                    Writers:
+                      projectWriters
+                    Readers:
+                      projectReaders
+
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls sales_data
+      tableId        Type    Labels   Time Partitioning   Clustered Fields
+ ------------------ ------- -------- ------------------- ------------------
+  electronic_items   TABLE
+  wastage_items      TABLE
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq DEL -t sales_data.electronic_items
+FATAL Command 'DEL' unknown
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq DEL sales_data.electronic_items
+FATAL Command 'DEL' unknown
+Run 'bq.py help' to get help
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>help
+For more information on a specific command, type HELP command-name
+ASSOC          Displays or modifies file extension associations.
+ATTRIB         Displays or changes file attributes.
+BREAK          Sets or clears extended CTRL+C checking.
+BCDEDIT        Sets properties in boot database to control boot loading.
+CACLS          Displays or modifies access control lists (ACLs) of files.
+CALL           Calls one batch program from another.
+CD             Displays the name of or changes the current directory.
+CHCP           Displays or sets the active code page number.
+CHDIR          Displays the name of or changes the current directory.
+CHKDSK         Checks a disk and displays a status report.
+CHKNTFS        Displays or modifies the checking of disk at boot time.
+CLS            Clears the screen.
+CMD            Starts a new instance of the Windows command interpreter.
+COLOR          Sets the default console foreground and background colors.
+COMP           Compares the contents of two files or sets of files.
+COMPACT        Displays or alters the compression of files on NTFS partitions.
+CONVERT        Converts FAT volumes to NTFS.  You cannot convert the
+               current drive.
+COPY           Copies one or more files to another location.
+DATE           Displays or sets the date.
+DEL            Deletes one or more files.
+DIR            Displays a list of files and subdirectories in a directory.
+DISKPART       Displays or configures Disk Partition properties.
+DOSKEY         Edits command lines, recalls Windows commands, and
+               creates macros.
+DRIVERQUERY    Displays current device driver status and properties.
+ECHO           Displays messages, or turns command echoing on or off.
+ENDLOCAL       Ends localization of environment changes in a batch file.
+ERASE          Deletes one or more files.
+EXIT           Quits the CMD.EXE program (command interpreter).
+FC             Compares two files or sets of files, and displays the
+               differences between them.
+FIND           Searches for a text string in a file or files.
+FINDSTR        Searches for strings in files.
+FOR            Runs a specified command for each file in a set of files.
+FORMAT         Formats a disk for use with Windows.
+FSUTIL         Displays or configures the file system properties.
+FTYPE          Displays or modifies file types used in file extension
+               associations.
+GOTO           Directs the Windows command interpreter to a labeled line in
+               a batch program.
+GPRESULT       Displays Group Policy information for machine or user.
+GRAFTABL       Enables Windows to display an extended character set in
+               graphics mode.
+HELP           Provides Help information for Windows commands.
+ICACLS         Display, modify, backup, or restore ACLs for files and
+               directories.
+IF             Performs conditional processing in batch programs.
+LABEL          Creates, changes, or deletes the volume label of a disk.
+MD             Creates a directory.
+MKDIR          Creates a directory.
+MKLINK         Creates Symbolic Links and Hard Links
+MODE           Configures a system device.
+MORE           Displays output one screen at a time.
+MOVE           Moves one or more files from one directory to another
+               directory.
+OPENFILES      Displays files opened by remote users for a file share.
+PATH           Displays or sets a search path for executable files.
+PAUSE          Suspends processing of a batch file and displays a message.
+POPD           Restores the previous value of the current directory saved by
+               PUSHD.
+PRINT          Prints a text file.
+PROMPT         Changes the Windows command prompt.
+PUSHD          Saves the current directory then changes it.
+RD             Removes a directory.
+RECOVER        Recovers readable information from a bad or defective disk.
+REM            Records comments (remarks) in batch files or CONFIG.SYS.
+REN            Renames a file or files.
+RENAME         Renames a file or files.
+REPLACE        Replaces files.
+RMDIR          Removes a directory.
+ROBOCOPY       Advanced utility to copy files and directory trees
+SET            Displays, sets, or removes Windows environment variables.
+SETLOCAL       Begins localization of environment changes in a batch file.
+SC             Displays or configures services (background processes).
+SCHTASKS       Schedules commands and programs to run on a computer.
+SHIFT          Shifts the position of replaceable parameters in batch files.
+SHUTDOWN       Allows proper local or remote shutdown of machine.
+SORT           Sorts input.
+START          Starts a separate window to run a specified program or command.
+SUBST          Associates a path with a drive letter.
+SYSTEMINFO     Displays machine specific properties and configuration.
+TASKLIST       Displays all currently running tasks including services.
+TASKKILL       Kill or stop a running process or application.
+TIME           Displays or sets the system time.
+TITLE          Sets the window title for a CMD.EXE session.
+TREE           Graphically displays the directory structure of a drive or
+               path.
+TYPE           Displays the contents of a text file.
+VER            Displays the Windows version.
+VERIFY         Tells Windows whether to verify that your files are written
+               correctly to a disk.
+VOL            Displays a disk volume label and serial number.
+XCOPY          Copies files and directory trees.
+WMIC           Displays WMI information inside interactive command shell.
+
+For more information on tools see the command-line reference in the online help.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq update sales_data.electronic_items id:integer,name:STRING,loc:STRING,year:INTEGER
+Table 'sound-bay-390008:sales_data.electronic_items' successfully updated.
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq show sales_data
+Dataset sound-bay-390008:sales_data
+
+   Last modified              ACLs             Labels    Type
+ ----------------- -------------------------- -------- ---------
+  22 Jun 12:34:31   Owners:                             DEFAULT
+                      naveenn.rch@gmail.com,
+                      projectOwners
+                    Writers:
+                      projectWriters
+                    Readers:
+                      projectReaders
+
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq show electronic_items
+BigQuery error in show operation: Not found: Dataset sound-
+bay-390008:electronic_items
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq show sales_data.electronic_items
+Table sound-bay-390008:sales_data.electronic_items
+
+   Last modified         Schema        Total Rows   Total Bytes   Expiration   Time Partitioning   Clustered Fields   Total Logical Bytes   Total Physical Bytes   Labels
+ ----------------- ------------------ ------------ ------------- ------------ ------------------- ------------------ --------------------- ---------------------- --------
+  22 Jun 13:16:50   |- id: integer     0            0                                                                 0
+
+                    |- name: string
+
+                    |- loc: string
+
+                    |- year: integer
+
+
+
+C:\Users\navee\AppData\Local\Google\Cloud SDK>bq ls
